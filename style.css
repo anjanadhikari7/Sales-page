@@ -1,0 +1,227 @@
+body {
+  margin: 0px;
+}
+/* Grid Container */
+.grid-container {
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto 5fr auto;
+}
+/* Flex Container */
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Header Styles */
+
+.header-content {
+  background-color: #f1fffa;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+}
+.header {
+  grid-area: header;
+  background: #f1fffa;
+  border-bottom: 1px solid darkgray;
+  z-index: 1;
+}
+p {
+  font-size: 15px;
+  font-family: URW Chancery L, cursive;
+}
+
+/* Nav Element */
+nav {
+  position: sticky;
+  top: 0px;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+nav ul li a:hover {
+  background-color: #96e6b3;
+}
+/* Main Section */
+.main {
+  grid-area: main;
+  background: #e8ffef;
+}
+
+section {
+  padding: 30px;
+  text-align: center;
+}
+
+.section-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* Chat sidebar | whatsapp, email, call */
+.chat {
+  position: fixed;
+  right: 0%;
+  top: 50%;
+  background-color: green;
+  border-radius: 20px;
+  padding: 10px;
+  color: aliceblue;
+  display: grid;
+  grid-gap: 10px;
+}
+.chat i:hover {
+  color: red;
+}
+/* Call to action button design */
+.cta-button {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  animation: pulse 1s infinite;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+/* Animated text/titles */
+.animated-text {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+/* Parallex Images 1-4*/
+.parallax-image1 {
+  background: url(./images/glenn-carstens-peters-npxXWgQ33ZQ-unsplash.jpg)
+    no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 40vh;
+  animation: Image 2s ease 0s infinite normal forwards;
+}
+.parallax-image2 {
+  background: url(./images/juanjo-jaramillo-mZnx9429i94-unsplash.jpg) no-repeat
+    center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 40vh;
+}
+.parallax-image3 {
+  background: url(./images/razvan-chisu-Ua-agENjmI4-unsplash.jpg) no-repeat
+    center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 40vh;
+}
+.parallax-image4 {
+  background: url(./images/miles-burke-idhx-MOCDSk-unsplash.jpg) no-repeat
+    center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 40vh;
+  animation: Image 2s ease 0s infinite normal forwards;
+}
+/* Styling ul element within courses */
+div ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+div ul li {
+  font-size: 15px;
+  font-family: URW Chancery L, cursive;
+  cursor: pointer;
+}
+/* Testimonial Styles */
+.testimonial {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+}
+/* Contact form */
+.form {
+  margin: 0px;
+}
+input,
+label {
+  width: 50%;
+  padding: 15px;
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+}
+.top-btn {
+  background-color: #007bff;
+  justify-content: center;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-decoration: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+/* Footer Section */
+.footer {
+  grid-area: footer;
+  background: #568259;
+  text-align: center;
+}
+
+/* All Keyframes */
+/* Image Animation */
+@keyframes Image {
+  0% {
+    background-position: center;
+    background-size: 100%;
+  }
+
+  100% {
+    background-position: center;
+    background-size: 150%;
+  }
+}
+/* Button Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(o.8);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+/* Text Animation keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
